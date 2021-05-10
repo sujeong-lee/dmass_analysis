@@ -4,7 +4,7 @@
 ## Relevant papers
 Please cite relevant papers if you use the DMASS galaxy sample or any other products from the sample. 
 * catalog: https://arxiv.org/abs/1906.01136
-* galaxy-galaxy lensing and galaxy clustering measurement: https://arxiv.org/abs/2104.11319 
+* galaxy-galaxy lensing measurement: https://arxiv.org/abs/2104.11319 
 * modified gravity analysis: https://arxiv.org/abs/2104.14515
 
 ## DMASS and random catalogs
@@ -22,13 +22,15 @@ The DMASS catalog and corresponding randoms are available at
 
 ## Measurements and chains
 #### galaxy-galaxy lensing and cross-correlation coefficient: 
-
-- datavector : `measurement/results/fits/measurement_y1_dmass_3x2pt.fits` 
+- All products of [the galaxy-galaxy lensing measurement paper](https://arxiv.org/abs/2104.14515) can be found in  `measurement` folder
+- measurement of 3x2pt datavector (ggl + clustering + shear) : `measurement/results/fits/measurement_y1_dmass_3x2pt.fits` 
+- 2pt-related outputs : `measurement/results/2pt/` 
 - chains : `measurement/results/chains/`
 - Please see [jupyter notebook](https://github.com/sujeong-lee/DMASS-analysis-publish/blob/master/notebook/DMASS-GGL%20results.ipynb) for relevant figures
 
-#### modified gravity chains: 
-- `analysis/chains/`
+#### modified gravity results: 
+- All products of [the modified gravity paper](https://arxiv.org/abs/2104.14515) can be found in  `analysis` folder
+- chains: `analysis/chains/`
 - Please see [jupyter notebook](https://github.com/sujeong-lee/DMASS-analysis-publish/blob/master/notebook/DMASS-MG%20Results.ipynb) for relevant figures
 
 
