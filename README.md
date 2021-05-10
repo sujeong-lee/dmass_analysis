@@ -25,9 +25,11 @@ The DMASS catalog and corresponding randoms are available at
 
 - datavector : `measurement/results/fits/measurement_y1_dmass_3x2pt.fits` 
 - chains : `measurement/results/chains/`
+- Please see [jupyter notebook](https://github.com/sujeong-lee/DMASS-analysis-publish/blob/master/notebook/DMASS-GGL%20results.ipynb) for relevant figures
 
 #### modified gravity chains: 
 - `analysis/chains/`
+- Please see [jupyter notebook](https://github.com/sujeong-lee/DMASS-analysis-publish/blob/master/notebook/DMASS-MG%20Results.ipynb) for relevant figures
 
 
 
