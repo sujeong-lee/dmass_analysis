@@ -21,7 +21,7 @@ boss_planck_chain.txt           : BOSS + Planck
 
 
 systematics/
-(This directory contains chains for robustness tests shown in Figure 5 in arxiv:2104.14515)
+*This directory contains chains for robustness tests shown in Figure 5 in arxiv:2104.14515)
 
 * DMASS 3x2pt + BOSS 
 wgsb_base.txt                                     : baseline chain
