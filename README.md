@@ -16,8 +16,18 @@ The DMASS catalog and corresponding randoms are available at
 * DMASS: [download](https://drive.google.com/uc?export=download&id=1XABi761R4OLsWxmQZGW03t40jOWvgC_q) 
 * randoms: [download](https://drive.google.com/uc?export=download&id=1mek4JB6PiKK0S0rpuUGnPlEuSnN2GZPD)
 
-1. Probability and systematics weights: The `CMASS_PROB` column contains a CMASS membership probability for each source. This column should be applied to sources as a weight. Systematics weight `WEIGHT` has been characterized in Section 4 in [the catalog paper](https://arxiv.org/abs/1906.01136). These two columns should be used as `weight = CMASS_PROB * WEIGHT` for any two-point computations.   
-2. Excluding low probability galaxies: In the catalog paper, we remove galaxies lower than a probability threshold `CMASS_PROB < 0.01` to reduce noise and yield the same number density as CMASS. More details can be found in Section 3.5 in [the catalog paper](https://arxiv.org/abs/1906.01136).  We recommend users to apply the same cut but leave it as user's choice.      
+The DMASS catalog includes 'CMASS_PROB', the selection weights for the DES Y1 GOLD galaxies that weights GOLD galaxies to produce a statistical match to the BOSS CMASS sample. See Section 3.4 of [the catalog paper](https://arxiv.org/abs/1906.01136) for details. Systematics weight `WEIGHT_SYS` has been characterized in Section 4 of the paper. These weights should be applied for any two-point function-related computations.
+
+To use the catalogs, follow the steps below:
+
+1. Exclude contaminated regions and noisy sources as follows:
+for dmass  : `(VETO != 0) && (CMASS_PROB > 0.01)`
+for random : `(VETO != 0)`
+
+`VETO != 0` keeps galaxies in the regions where the impact of survey properties (observing condition, depth) is negligible. The cut `CMASS_PROB > 0.01` removes low probability galaxies that are less likely to be a CMASS. The cut was determined to yield the same number density as CMASS. More details can be found in Section 3.5 of [the catalog paper](https://arxiv.org/abs/1906.01136). We recommend applying the same cut as stated here but leave it as the user's choice.    
+
+2. Apply weights to the DMASS galaxies as follows:
+`weight = CMASS_PROB * WEIGHT_SYS`
 
 
 ## Measurements and chains
