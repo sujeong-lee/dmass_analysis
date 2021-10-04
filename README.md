@@ -20,14 +20,14 @@ The DMASS catalog includes `CMASS_PROB`, the selection weights for the DES Y1 GO
 
 To use the catalogs, follow the steps below:
 
-1. Exclude contaminated regions and noisy sources as follows:
->for dmass  : `(VETO != 0) && (CMASS_PROB > 0.01)`
->for random : `(VETO != 0)`
+1. Exclude contaminated regions and noisy sources as follows: 
+   > for dmass  : `(VETO != 0) && (CMASS_PROB > 0.01)` <br>
+   > for random : `(VETO != 0)` <br>
+   
+   `VETO != 0` keeps galaxies in the regions where the impact of survey properties (observing condition, depth) is negligible. The cut `CMASS_PROB > 0.01` removes low probability galaxies that are less likely to be a CMASS. The cut was determined to yield the same number density as CMASS. More details can be found in Section 3.5 of [the catalog paper](https://arxiv.org/abs/1906.01136). We recommend applying the same cut as stated here but leave it as the user's choice.    
 
-`VETO != 0` keeps galaxies in the regions where the impact of survey properties (observing condition, depth) is negligible. The cut `CMASS_PROB > 0.01` removes low probability galaxies that are less likely to be a CMASS. The cut was determined to yield the same number density as CMASS. More details can be found in Section 3.5 of [the catalog paper](https://arxiv.org/abs/1906.01136). We recommend applying the same cut as stated here but leave it as the user's choice.    
-
-2. Apply weights to the DMASS galaxies as follows:
->`weight = CMASS_PROB * WEIGHT_SYS`
+2. Apply weights to the DMASS galaxies as follows: 
+    > `weight = CMASS_PROB * WEIGHT_SYS`
 
 
 ## Measurements and chains
