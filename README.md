@@ -16,18 +16,18 @@ The DMASS catalog and corresponding randoms are available at
 * DMASS: [download](https://drive.google.com/uc?export=download&id=1XABi761R4OLsWxmQZGW03t40jOWvgC_q) 
 * randoms: [download](https://drive.google.com/uc?export=download&id=1mek4JB6PiKK0S0rpuUGnPlEuSnN2GZPD)
 
-The DMASS catalog includes 'CMASS_PROB', the selection weights for the DES Y1 GOLD galaxies that weights GOLD galaxies to produce a statistical match to the BOSS CMASS sample. See Section 3.4 of [the catalog paper](https://arxiv.org/abs/1906.01136) for details. Systematics weight `WEIGHT_SYS` has been characterized in Section 4 of the paper. These weights should be applied for any two-point function-related computations.
+The DMASS catalog includes `CMASS_PROB`, the selection weights for the DES Y1 GOLD galaxies that weights GOLD galaxies to produce a statistical match to the BOSS CMASS sample. See Section 3.4 of [the catalog paper](https://arxiv.org/abs/1906.01136) for details. Systematics weight `WEIGHT_SYS` has been characterized in Section 4 of the paper. These weights should be applied for any two-point function-related computations.
 
 To use the catalogs, follow the steps below:
 
 1. Exclude contaminated regions and noisy sources as follows:
-for dmass  : `(VETO != 0) && (CMASS_PROB > 0.01)`
-for random : `(VETO != 0)`
+>for dmass  : `(VETO != 0) && (CMASS_PROB > 0.01)`
+>for random : `(VETO != 0)`
 
 `VETO != 0` keeps galaxies in the regions where the impact of survey properties (observing condition, depth) is negligible. The cut `CMASS_PROB > 0.01` removes low probability galaxies that are less likely to be a CMASS. The cut was determined to yield the same number density as CMASS. More details can be found in Section 3.5 of [the catalog paper](https://arxiv.org/abs/1906.01136). We recommend applying the same cut as stated here but leave it as the user's choice.    
 
 2. Apply weights to the DMASS galaxies as follows:
-`weight = CMASS_PROB * WEIGHT_SYS`
+>`weight = CMASS_PROB * WEIGHT_SYS`
 
 
 ## Measurements and chains
